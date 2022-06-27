@@ -1,0 +1,17 @@
+The working methodology which involves getting the deep learning model and saving that model. Then the TensorFlow model is converted into the TensorFlow lite model so that we can use our model for android applications. Then the TFlite model is integrated with firebase to deploy it to the android application.
+
+
+
+IMPORTING THE TF MODEL:
+The pre-trained model is saved using the TensorFlow feature "saved model". With the help of the saved model, it becomes easy to share or deploy the model as it contains the complete program and trained parameters.
+
+
+CONVERTING INTO TFLITE:
+TensorFlow lite is used to deploy models on mobiles, and other edge devices. TFlite provides several advantages over TensorFlow's protocol buffer model format such as reduced size and faster inference data is directly accessed without an extra parsing/unpacking step that enables TensorFlow Lite to execute efficiently on mobile devices which have less limited compute and memory resources.We need to convert our TF model into a TFlite model because the model can be deployed on edge devices like mobiles using Android or iOS to make the inference at the edge. When we convert the model from TensorFlow to TensorFlow lite the size of the file is reduced.
+
+
+USING FIREBASE AS CLOUD/SERVER:
+Firebase is developed by google to provide libraries and infrastructure useful for application development. Firebase has so many features including Firebase ML which offers various solutions to use machine learning on mobile devices. We can download the model from firebase to use it in the mobile app at any time after we upload TFlite model into the firebase.
+There are various kinds of mobile devices having powerful chips optimized to run machine learning models and devices with low-end CPUs, where machine learning models are difficult to run. This causes model inference speed on users’ devices to vary across the user base. To tackle this situation, we can use Firebase Performance Monitoring which is a general-purpose tool for measuring the performance of mobile apps, to measure how long your model inference takes across all your user devices.
+From each user device measured performance data can be uploaded to the firebase server to know the model performance across all the devices. Slow inference devices can be observed from the firebase console. We can also monitor how the inference speed differs between the operating systems.
+Sometimes a model can perform great on test data and may fail in production. So, to overcome this situation we can release the model to a small set of users. Firebase provides a feature called A/B test where we can test the original model and closely monitor how it affects important metrics before releasing it to all our users. Once we are confident with the A/B test result, we can roll out the better version to all users.
