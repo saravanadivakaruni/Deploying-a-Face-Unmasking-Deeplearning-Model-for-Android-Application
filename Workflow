@@ -15,3 +15,14 @@ Firebase is developed by google to provide libraries and infrastructure useful f
 There are various kinds of mobile devices having powerful chips optimized to run machine learning models and devices with low-end CPUs, where machine learning models are difficult to run. This causes model inference speed on users’ devices to vary across the user base. To tackle this situation, we can use Firebase Performance Monitoring which is a general-purpose tool for measuring the performance of mobile apps, to measure how long your model inference takes across all your user devices.
 From each user device measured performance data can be uploaded to the firebase server to know the model performance across all the devices. Slow inference devices can be observed from the firebase console. We can also monitor how the inference speed differs between the operating systems.
 Sometimes a model can perform great on test data and may fail in production. So, to overcome this situation we can release the model to a small set of users. Firebase provides a feature called A/B test where we can test the original model and closely monitor how it affects important metrics before releasing it to all our users. Once we are confident with the A/B test result, we can roll out the better version to all users.
+
+
+INTEGRATING FIREBASE WITH ANDROID APPLICATION:
+-> To use firebase features in the app, we need to integrate Firebase with the Android app. The steps to integrate Firebase and Android Studio are as follows:
+-> Open the Firebase project and select Android.
+-> Register app in Firebase.
+-> Provide SHA-1 debug certificate.
+-> Download and move the config file into the android app module root directory.
+-> Add Firebase SDK into Android Studio.
+-> Add the Dependencies into the App Gradle files.
+-> Sync and build Gradle.
